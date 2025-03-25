@@ -1,22 +1,71 @@
-        body{
+        body {
             background-color: rgb(43, 39, 39);
         }
+
         /* Carousel İçindeki Resimleri Optimize Et */
         .carousel-item img {
             width: 100%;
-            height: 450px; /* Ekran yüksekliğinin %80'i kadar */
-            object-fit: cover; /* Görselin kırpılmadan en iyi şekilde oturması */
+            height: 450px;
+            /* Ekran yüksekliğinin %80'i kadar */
+            object-fit: cover;
+            /* Görselin kırpılmadan en iyi şekilde oturması */
         }
 
         /* Mobil Uyumlu Yükseklik Ayarlaması */
         @media (max-width: 768px) {
             .carousel-item img {
-                height: 300px; /* Mobilde yükseklik daha küçük */
+                height: 300px;
+                /* Mobilde yükseklik daha küçük */
             }
         }
 
-        .card{
+        .card {
             width: 100%;
             margin-top: 110px;
             padding: 100px 0;
         }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(10px);
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .backstage {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Tam ekran yap */
+            overflow: hidden;
+        }
+        
+        .backstage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Resmin tam oturmasını sağlar */
+        }
+        #heroCarousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2; /* Navbar'ın altında ama resmin üstünde olsun */
+        }
+        
+        .carousel-inner {
+            height: 100%;
+        }
+        
+        .carousel-item img {
+            margin-top: 450px;
+            height: 55vh; /* Ekran yüksekliği kadar olmasını sağlar */
+            width: auto;
+            object-fit: contain;
+        }
+
+
+        
+        
