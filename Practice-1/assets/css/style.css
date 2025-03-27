@@ -1,71 +1,339 @@
-        body {
-            background-color: rgb(43, 39, 39);
-        }
+  /* Arka Plan ve Genel Gövde */
+  body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
-        /* Carousel İçindeki Resimleri Optimize Et */
-        .carousel-item img {
-            width: 100%;
-            height: 450px;
-            /* Ekran yüksekliğinin %80'i kadar */
-            object-fit: cover;
-            /* Görselin kırpılmadan en iyi şekilde oturması */
-        }
+/* Navbar Stili */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-        /* Mobil Uyumlu Yükseklik Ayarlaması */
-        @media (max-width: 768px) {
-            .carousel-item img {
-                height: 300px;
-                /* Mobilde yükseklik daha küçük */
-            }
-        }
+/* Özel Carousel Stilleri */
+.radial-gradient-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle at 20% 80%, 
+    rgba(255, 20, 147, 0.5) 0%,      /* Koyu pembe */
+    rgba(0, 255, 255, 0.6) 50%,      /* Cam göbeği */
+    rgba(50, 205, 50, 0.7) 100%);    /* Limon yeşili */
+}
 
-        .card {
-            width: 100%;
-            margin-top: 110px;
-            padding: 100px 0;
-        }
+.carousel-inner {
+    border-radius: 0;
+}
 
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.1) !important;
-            backdrop-filter: blur(10px);
-            position: absolute;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+.carousel-item {
+    height: 75vh;
+    min-height: 500px;
+}
 
-        .backstage {
-            position: relative;
-            width: 100%;
-            height: 100vh; /* Tam ekran yap */
-            overflow: hidden;
-        }
-        
-        .backstage img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Resmin tam oturmasını sağlar */
-        }
-        #heroCarousel {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2; /* Navbar'ın altında ama resmin üstünde olsun */
-        }
-        
-        .carousel-inner {
-            height: 100%;
-        }
-        
-        .carousel-item img {
-            margin-top: 450px;
-            height: 55vh; /* Ekran yüksekliği kadar olmasını sağlar */
-            width: auto;
-            object-fit: contain;
-        }
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.carousel-caption {
+    bottom: 5%;
+    text-align: left;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    backdrop-filter: blur(5px);
+    left: 10%;
+    right: 10%;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: rgba(255,255,255,0.5);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+    background-color: #fff;
+    transform: scale(1.3);
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.caption-title {
+    font-size: 3.5rem;
+    font-weight: 100;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 1rem;
+}
+
+.caption-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.caption-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    font-weight: 100;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 992px) {
+    .carousel-caption {
+        bottom: 15%;
+        left: 5%;
+        right: 5%;
+    }
+    
+    .caption-title {
+        font-size: 2.5rem;
+    }
+    
+    .caption-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .carousel-caption {
+        bottom: 10%;
+        padding: 1rem;
+    }
+    
+    .caption-title {
+        font-size: 2rem;
+    }
+    
+    .caption-text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .caption-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+.product-showcase .card{
+    background-color: rgb(34, 32, 32);
+}
 
 
-        
-        
+.product-showcase p{
+color: white;
+}
+
+
+
+.card-divider-animated {
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #ffffff 50%, 
+        transparent 100%);
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+.card-divider-animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255,255,255,0.8) 50%, 
+        transparent 100%);
+    animation: shine 4s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+
+
+
+
+/* Genel Ürün Vitrini Stili */
+.product-showcase {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 4rem 0;
+    color: #fff;
+}
+
+/* Kart Stili */
+.product-showcase .card {
+    background: rgba(30, 30, 30, 0.8);
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-showcase .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Resim Stili */
+.product-showcase .img-fluid {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 15px 0 0 15px !important;
+}
+
+.product-showcase .row:hover .img-fluid {
+    transform: scale(1.03);
+}
+
+/* Kart İçeriği */
+.product-showcase .card-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-showcase .card-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.product-showcase .card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff7b00, #ff0058);
+}
+
+.product-showcase .card-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d1d1d1;
+    margin-bottom: 1.5rem;
+}
+
+.product-showcase .text-muted {
+    color: #a1a1a1 !important;
+    font-size: 0.9rem;
+}
+
+/* Animasyonlu Ayırıcı Çizgi */
+.card-divider-animated {
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255,120,0,0.8) 50%, 
+        transparent 100%);
+    margin: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+.card-divider-animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255,200,0,0.8) 50%, 
+        transparent 100%);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 992px) {
+    .product-showcase .card-body {
+        padding: 1.5rem;
+    }
+    
+    .product-showcase .img-fluid {
+        border-radius: 15px 15px 0 0 !important;
+        height: 250px;
+    }
+    
+    .product-showcase .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .product-showcase .card-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-showcase {
+        padding: 2rem 0;
+    }
+    
+    .product-showcase .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .card-divider-animated {
+        margin: 1.5rem 0;
+    }
+}
