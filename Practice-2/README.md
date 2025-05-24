@@ -22,29 +22,4 @@ Bu proje, kullanıcıların giriş yapabilmesi için tasarlanmış sade ve kulla
 
 ---
 
-## 🚀 Projeyi Çalıştırma
-
-1. Projeyi indir veya klonla.
-2. `index.html` dosyasını herhangi bir modern tarayıcıda aç.
-3. Login formu kullanıma hazırdır.
-
----
-
-## 🛠️ Geliştirme ve Katkı
-
-Projeye katkı sağlamak istersen:
-
-1. Forkla ve kendi versiyonunu oluştur.
-2. Değişikliklerini yap.
-3. Pull request ile paylaş.
-
----
-
-## 📞 İletişim
-
-Sorularınız ve önerileriniz için benimle iletişime geçebilirsiniz.
-
----
-
-*Teşekkürler!*
 
